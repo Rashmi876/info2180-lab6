@@ -60,7 +60,7 @@ window.onload = function(){
 
 function changing(){
 	//fetch('superheroes.php', {mode: 'no-cors'})
-	fetch('http://localhost:8080/superheroes.php', {mode: 'no-cors'})
+	fetch('http://localhost:8080/superheroes.php', {mode: 'cors'})
 	 .then(response => response.text())
 	 //.then(data => {console.log(data)})
 	 .then(data => {
