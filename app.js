@@ -1,7 +1,22 @@
 window.onload = function(){
-	document.getElementById("searchbutton").addEventListener('click', changing)
+	document.getElementById("searchbutton").addEventListener('click', changing(document.getElementById("field").value))
+	//document.getElementById("result").innerHTML = changing2
 	//document.getElementById("search")
 	//changing();
+}
+
+function changing(str){
+	//fetch('superheroes.php', {mode: 'no-cors'})
+	fetch("http://localhost:8080/superheroes.php?query =" + str, {mode: 'cors'})
+	 .then(response => response.text())
+	 //.then(data => {console.log(data)})
+	 .then(data => {
+	 	document.getElementById("result").innerHTML = data
+	 	//alert(data)
+	 })
+	 .catch(error => console.error(error))
+	 	//alert(error)
+	 //)
 }
 
 // var httpRequest = new XMLHttpRequest();
@@ -58,18 +73,7 @@ window.onload = function(){
 
 // };
 
-function changing(){
-	//fetch('superheroes.php', {mode: 'no-cors'})
-	fetch('http://localhost:8080/superheroes.php', {mode: 'cors'})
-	 .then(response => response.text())
-	 //.then(data => {console.log(data)})
-	 .then(data => {
-	 	alert(data)
-	 })
-	 .catch(error => console.error(error))
-	 	//alert(error)
-	 //)
-}
+
 
 // function changing(){
 // 	var httpRequest = new XMLHttpRequest();

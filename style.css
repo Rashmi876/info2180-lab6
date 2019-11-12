@@ -1,0 +1,16 @@
+*{
+	box-sizing: : border-box;
+}
+
+.Header{
+	grid-area: header;
+	text-align: center;
+	align-items: center;
+	color: yellow;
+	height: 100px;
+	background: blue;
+}
+
+#searchbutton{
+	color: red;
+}
