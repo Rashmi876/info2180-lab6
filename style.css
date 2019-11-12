@@ -6,11 +6,11 @@
 	grid-area: header;
 	text-align: center;
 	align-items: center;
-	color: yellow;
+	color: black;
 	height: 100px;
 	background: blue;
 }
 
 #searchbutton{
-	color: red;
+	background: red;
 }
